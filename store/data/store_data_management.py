@@ -8,7 +8,7 @@ class StoreDataManagement:
         try:
             with open(filename, 'r') as f:
                 store = json.load(f)
-                print(f"store loaded!")
+                print(f"{filename} loaded!")
                 # if not isinstance(store, list):
                 #     print("Invalid format in store.json, initializing as empty list.")
                 #     return []

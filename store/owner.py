@@ -1,4 +1,3 @@
-from store.data.store_data_management import StoreDataManagement
 
 
 class Owner:

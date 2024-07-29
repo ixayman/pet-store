@@ -1,8 +1,27 @@
 [
     {
         "id": 1,
-        "name": "asd",
-        "phone": "cv",
-        "pets": []
+        "name": "ayman",
+        "phone": "55555",
+        "pets": [
+            1
+        ]
+    },
+    {
+        "id": 2,
+        "name": "bob",
+        "phone": "444444",
+        "pets": [
+            3
+        ]
+    },
+    {
+        "id": 3,
+        "name": "alice",
+        "phone": "333333",
+        "pets": [
+            2,
+            5
+        ]
     }
 ]

@@ -1,11 +1,47 @@
 [
     {
         "id": 1,
-        "name": "asdf",
+        "name": "snowball",
+        "species": "cat",
+        "indoor": true,
+        "age": 7.0,
+        "owner": 1,
+        "vaccinated": false
+    },
+    {
+        "id": 2,
+        "name": "spike",
         "species": "dog",
-        "breed": "asd",
-        "age": 17.571428571428573,
-        "owner": "sdf",
+        "breed": "pitbull",
+        "age": 21.0,
+        "owner": 3,
+        "vaccinated": false
+    },
+    {
+        "id": 3,
+        "name": "tom",
+        "species": "cat",
+        "indoor": true,
+        "age": 14.0,
+        "owner": 2,
+        "vaccinated": false
+    },
+    {
+        "id": 4,
+        "name": "judge",
+        "species": "dog",
+        "breed": "bulldog",
+        "age": 35.0,
+        "owner": "None",
+        "vaccinated": false
+    },
+    {
+        "id": 5,
+        "name": "simba",
+        "species": "cat",
+        "indoor": true,
+        "age": 49.0,
+        "owner": 3,
         "vaccinated": false
     }
 ]

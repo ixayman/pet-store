@@ -7,10 +7,11 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 20px;
         }
 
         header {
@@ -21,23 +22,8 @@
             color: #333;
         }
 
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            margin-right: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
         h2 {
             color: #555;
-            margin-top: 30px;
         }
 
         table {
@@ -47,7 +33,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 30px;
         }
 
         th, td {
@@ -95,44 +80,25 @@
 
 <body>
     <header>
-        <h1>Pet store</h1>
-    </header>
-
-    <nav>
-        <a href="/add_owner" class="btn">Add Owner</a>
-        <a href="/add_pet" class="btn">Add Pet</a>
-    </nav>
-    <h2>Owners</h2>
-    <table>
-        <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Phone number</th>
-        </tr>
         {% for owner in owners %}
-        <tr>
-            <td>{{ owner.id }}</td>
-            <td>{{ owner.name }}</td>
-            <td>{{ owner.phone }}</td>
-            <td><a href="/link_pet?owner={{ owner.id }}">Link pet</a></td>
-            <td><a href="/remove_owner?owner={{ owner.id }}">Remove</a></td>
-        </tr>
+                {% if owner.id == owner_id %}
+        <h1>
+                  Owner name:  {{ owner.name }}
+        </h1>
+        {% endif %}
         {% endfor %}
-    </table>
-
-    <h2>Pets</h2>
+    </header>
+    <h2>All Pets</h2>
     <table>
         <tr>
-            <th>id</th>
             <th>Name</th>
             <th>Species</th>
             <th>Age</th>
-            <th>Owner id</th>
+            <th>Owner</th>
             <th>Breed/Indoor</th>
         </tr>
         {% for pet in pets %}
         <tr>
-            <td>{{ pet.id }}</td>
             <td>{{ pet.name }}</td>
             <td>{{ pet.species }}</td>
             <td>{{ pet.age }}</td>
@@ -144,9 +110,12 @@
                     {{ 'Indoor' if pet.indoor else 'Outdoor' }}
                 {% endif %}
             </td>
-            <td><a href="/remove_pet?pet={{ pet.id }}">Remove</a></td>
+            <td><a href="/link_pet_to_owner?pet_id={{ pet.id }}&owner_id={{ owner_id }}">Link</a></td>
+            <td><a href="/unlink_pet_from_owner?pet_id={{ pet.id }}&owner_id={{ owner_id }}">UnLink</a></td>
+
         </tr>
         {% endfor %}
     </table>
+<a href="/" class="btn">Return to homepage</a>
 </body>
 </html>
