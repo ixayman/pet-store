@@ -23,14 +23,12 @@ class FlaskManagement:
 
     @app.route('/add_owner', methods=['GET', 'POST'])
     def add_owner(self):
-        store_management = StoreManagement()
         if request.method == 'POST':
-            owners = self.owners
             name = request.form['name']
             phone = request.form['phone']
-            owner_id = max(owners.keys(), default=0) + 1
-            owners[owner_id] = {'name': name, 'phone': phone}
-            self.owners.append(owners[owner_id])
+            owner_id = max(self.owners.keys(), default=0) + 1
+            new_owner = {'id': owner_id, 'name': name, 'phone': phone}
+            self.owners.append(new_owner)
             return redirect(url_for('index'))
         return render_template('add_owner.html')
 
