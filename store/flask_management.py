@@ -27,7 +27,7 @@ class FlaskManagement:
             name = request.form['name']
             phone = request.form['phone']
             owner_id = max(self.owners.keys(), default=0) + 1
-            new_owner = {'id': owner_id, 'name': name, 'phone': phone}
+            new_owner = Owner(owner_id, name, phone)
             self.owners.append(new_owner)
             return redirect(url_for('index'))
         return render_template('add_owner.html')
