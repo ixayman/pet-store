@@ -8,9 +8,9 @@ from store.store_management import StoreManagement
 
 class FlaskManagement:
     def __init__(self):
-        store_management = StoreManagement()
-        self.owners = store_management.owners
-        self.pets = store_management.pets
+        self.store_management = StoreManagement()
+        self.owners = self.store_management.owners
+        self.pets = self.store_management.pets
 
     app = Flask(__name__, template_folder='templates')
     app.secret_key = '10/10uncrackable-key'
@@ -28,7 +28,7 @@ class FlaskManagement:
             phone = request.form['phone']
             owner_id = max(self.owners.keys(), default=0) + 1
             new_owner = Owner(owner_id, name, phone)
-            self.owners.append(new_owner)
+            self.store_management.add_owner(new_owner)
             return redirect(url_for('index'))
         return render_template('add_owner.html')
 
