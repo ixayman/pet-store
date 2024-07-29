@@ -3,7 +3,7 @@ from store.pet import Pet
 
 
 class Dog(Pet):
-    def __init__(self,id, name, age, breed, owner):
+    def __init__(self, id, name, age, breed, owner):
         super().__init__(id, name, "dog", age, owner)
         self.breed = breed
         self._vaccinated = False
@@ -21,4 +21,3 @@ class Dog(Pet):
             "owner": self.owner,
             "vaccinated": self._vaccinated
         }
-

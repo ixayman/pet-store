@@ -27,7 +27,9 @@ class FlaskManagement:
                 phone = request.form['phone']
                 owner_id = len(self.owners) + 1
                 new_owner = Owner(owner_id, name, phone)
-                self.store_management.add_owner(new_owner)
+                self.store_management.add_owner(new_owner.to_dict())
+                print(self.owners)
+                self.store_management.save()
                 return redirect(url_for('index'))
             return render_template('add_owner.html')
 
@@ -53,24 +55,27 @@ class FlaskManagement:
         def add_cat():
             return render_template('add_cat.html')
 
-        @self.app.route('/submit_pet', methods=['POST'])
+        @self.app.route('/submit_pet', methods=['GET', 'POST'])
         def submit_pet():
             species = request.form.get('species')
             name = request.form.get('name')
             age = request.form.get('age')
             owner = request.form.get('owner')
-
             if species == 'dog':
                 breed = request.form.get('breed')
-                # Save dog data (e.g., to a database)
+                dog_id = len(self.pets) + 1
+                new_dog = Dog(dog_id, name, age, breed, owner)
+                self.store_management.add_pet(new_dog.to_dict())
+                self.store_management.save()
                 print(f"Dog: {name}, Age: {age}, Owner: {owner}, Breed: {breed}")
             elif species == 'cat':
                 indoor = 'indoor' in request.form
-                # Save cat data (e.g., to a database)
+                cat_id = len(self.pets) + 1
+                new_cat = Cat(cat_id, name, age, owner, indoor)
+                self.store_management.add_pet(new_cat.to_dict())
+                self.store_management.save()
                 print(f"Cat: {name}, Age: {age}, Owner: {owner}, Indoor: {indoor}")
-
-            # Redirect to a success page or display a success message
-            return render_template('index.html')
+            return redirect(url_for('index'))
 
     def run(self):
         self.app.run(debug=True)

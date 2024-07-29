@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "asdf",
+        "species": "dog",
+        "breed": "asd",
+        "age": 17.571428571428573,
+        "owner": "sdf",
+        "vaccinated": false
+    }
+]

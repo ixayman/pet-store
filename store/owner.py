@@ -19,6 +19,7 @@ class Owner:
 
     def to_dict(self):
         return {
+            "id": self._id,
             "name": self.name,
             "phone": self.phone,
             "pets": self.pets
