@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fa617d-1f49-46b6-98f6-fa5db3db91ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/file-processing/custom_exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-processing/file_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-processing/file_operations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-processing/file_processing_system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-processing/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/templates/link_pet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/data/owner.json" beforeDir="false" afterPath="$PROJECT_DIR$/store/data/owner.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/data/pet.json" beforeDir="false" afterPath="$PROJECT_DIR$/store/data/pet.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/data/store_data_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/data/store_data_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/flask_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/flask_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/owner.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/owner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/pet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/add_cat.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/add_cat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/add_dog.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/add_dog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/add_owner.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/add_owner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/add_pet.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/add_pet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="b3fa617d-1f49-46b6-98f6-fa5db3db91ce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
