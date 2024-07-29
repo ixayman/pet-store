@@ -175,5 +175,5 @@ class FlaskManagement:
 
 
 if __name__ == '__main__':
-    f = FlaskManagement()
-    f.run()
+    app = FlaskManagement()
+    app.run()
