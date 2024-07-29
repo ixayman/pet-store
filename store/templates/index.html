@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Pet store</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        table {
+            border-spacing: 15px;
+        }
+        th a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
-$END$
+    <header>
+        <h1>Pet store</h1>
+    </header>
+
+    <nav>
+        <a href="/add_owner">Add Owner</a> |
+        <a href="/add_pet">Add Pet</a>
+    </nav>
+    <h2>Owners</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        {% for owner in owners %}
+        <tr>
+            <td>{{ owner.name }}</td>
+            <td>{{ owner.address }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Pets</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Owner</th>
+            <th>Breed/Indoor</th>
+        </tr>
+        {% for pet in pets %}
+        <tr>
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.species }}</td>
+            <td>{{ pet.age }}</td>
+            <td>{{ owners[pet.owner_id].name }}</td>
+            <td>
+                {% if pet.species == 'dog' %}
+                    {{ pet.breed }}
+                {% elif pet.species == 'cat' %}
+                    {{ 'Indoor' if pet.indoor else 'Outdoor' }}
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

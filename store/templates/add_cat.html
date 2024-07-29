@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cat</title>
 </head>
 <body>
-$END$
+    <form method="post" action="/submit_pet">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" value="cat" readonly>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+
+        <label for="owner">Owner:</label>
+        <input type="text" id="owner" name="owner">
+
+        <label for="indoor">Indoor:</label>
+        <input type="checkbox" id="indoor" name="indoor">
+
+        <input type="submit" value="Add Cat">
+    </form>
 </body>
 </html>
