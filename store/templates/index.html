@@ -54,7 +54,7 @@
             <td>{{ pet.name }}</td>
             <td>{{ pet.species }}</td>
             <td>{{ pet.age }}</td>
-            <td>{{ owners[pet.owner_id].name }}</td>
+            <td>{{ pet.owner}}</td>
             <td>
                 {% if pet.species == 'dog' %}
                     {{ pet.breed }}
