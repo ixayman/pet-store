@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 
-from store.owner import Owner
-from store.dog import Dog
-from store.cat import Cat
+from store.classes.owner import Owner
+from store.classes.dog import Dog
+from store.classes.cat import Cat
 from store.store_management import StoreManagement
 
 

@@ -1,5 +1,4 @@
-from store.data.store_data_management import StoreDataManagement
-from store.pet import Pet
+from store.classes.pet import Pet
 
 
 class Dog(Pet):
